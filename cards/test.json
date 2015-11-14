@@ -1,0 +1,32 @@
+{
+    "infos": {
+        "title": "Test",
+        "author": "Bibi",
+        "created": "october 2015",
+        "updated": "november 2015"
+    },
+    "questions": [
+        {
+            "question": "What is your name ?",
+            "answers": [
+                "lol",
+                "hihi",
+                "mdr"
+            ],
+            "goodAnswer": 3,
+            "answerType": "button",
+            "score": 1
+        },
+        {
+            "question": "Hey ?",
+            "answers": [
+                "lol",
+                "hihi",
+                "mdr"
+            ],
+            "goodAnswer": 3,
+            "answerType": "button",
+            "score": 1
+        }
+    ]
+}
