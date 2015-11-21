@@ -11,9 +11,21 @@
 	</div>
 	<div id="appcontent">
 		<?php
-			include_once('lister.php');
+			if(isset($_GET['action'])){
+				if(($_GET['action'] == "edit")){
+					include_once('edit.php');
+				}
+			}
+			else if(isset($_REQUEST['action'])){
+				if(($_REQUEST['action'] == "edit")){
+					include_once('edit.php');
+				}			
+			}
+			else {
+				include_once('lister.php');
+			}
+			
 		?>
-
 	</div>
 </body>
 </html>

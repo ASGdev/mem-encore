@@ -4,6 +4,7 @@ var progress = 0;
 var score = 0;
 var data;
 var passintro = true;
+var doc_url = "";
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -14,6 +15,7 @@ xmlhttp.onreadystatechange = function() {
 
 /**/
 function init(url){
+	doc_url = url;
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
@@ -28,6 +30,9 @@ function start(){
 		ui.insertAdjacentHTML('beforeend', "<p>Created : "+data["infos"]["created"]+"</p>");
 		ui.insertAdjacentHTML('beforeend', "<p>Updated : "+data["infos"]["updated"]+"</p>");
 		ui.insertAdjacentHTML('beforeend', '<a href="#" class="button" onclick="start()">Start !</a>');
+		if(data["infos"]["editable"]){
+			ui.insertAdjacentHTML('beforeend', '<a href="index.php?action=edit&file='+doc_url+'" class="button">Edit</a>');
+		}
 		passintro = false;
 	}
 	else {

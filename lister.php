@@ -20,7 +20,6 @@
                 <?php foreach ($lister->getSystemMessages() as $message): ?>
                     <div class="alert alert-<?php echo $message['type']; ?>">
                         <?php echo $message['text']; ?>
-                        <a class="close" data-dismiss="alert" href="#">&times;</a>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
@@ -47,7 +46,7 @@
                         </a>
 
                     <?php else : ?>
-                        <a href="?#" onclick="init('<?php echo $fileInfo['url_path']; ?>')" class="clearfix" data-name="<?php echo $name; ?>">
+                        <a href="#" onclick="init('<?php echo $fileInfo['url_path']; ?>')" class="clearfix" data-name="<?php echo $name; ?>">
                             <div class="ui-card ui-card-file" data-name="<?php echo $name; ?>" data-href="<?php echo $fileInfo['url_path']; ?>">
                                 <?php
                                     echo $name;
